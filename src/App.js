@@ -38,6 +38,7 @@ function App () {
   return (
     <div className='container-fluid'>
       <h1 id="center">Kaikki mitä olet halunnut IMDB:ltä!</h1>
+      <h2 id="center">Olethan kärsivällinen, olen aika hidas...</h2>
       <div className="row">
         <div className="col-6">
       <br />
