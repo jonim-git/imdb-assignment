@@ -42,7 +42,7 @@ function App () {
       <div className="row">
         <div className="col-6">
       <br />
-      <button onClick={etsi} >Paina tästä löytääkseni parhaat Bean-leffat!</button>
+      <button onClick={etsi} >Paina tästä löytääksesi parhaat Bean-leffat!</button>
       <br />
       <ol>
          {leffat?.map(leffa => (
@@ -56,7 +56,7 @@ function App () {
       </div>
       <div className="col-6">
       <br />
-      <button onClick={etsiLyhyet} >Paina tästä löytääkseni lyhyitä action-leffoja suomenkielisillä julkaisunimillä!</button>
+      <button onClick={etsiLyhyet} >Paina tästä löytääksesi lyhyitä action-leffoja suomenkielisillä julkaisunimillä!</button>
       <br />
       <ol>
         {lyhyet?.map(lyhyt => (
