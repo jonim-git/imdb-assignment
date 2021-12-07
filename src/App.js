@@ -7,8 +7,8 @@ const URL = 'http://localhost/imdb/'
 function App() {
   const [leffat, setLeffat] = useState([]);
   const [lyhyet, setLyhyet] = useState([]);
-  const [isLoaded, setIsLoaded] = useState(true)
-  const [isLoaded1, setIsLoaded1] = useState(true)
+  const [isLoaded, setIsLoaded] = useState(null)
+  const [isLoaded1, setIsLoaded1] = useState(null)
 
   function etsi(e) {
     e.preventDefault();
@@ -51,9 +51,9 @@ function App() {
             Paina tästä löytääksesi parhaat Bean-julkaisut!</button>
           <br />
           <ol>
-            {!isLoaded ? (
-              <div class="spinner-border text-info" role="status">
-                <span class="visually-hidden">Loading...</span>
+            {isLoaded === false ? (
+              <div className="spinner-border text-info" role="status">
+                <span className="visually-hidden">Loading...</span>
               </div>
             ) : (
               (leffat?.map(leffa => (
@@ -71,9 +71,9 @@ function App() {
           <button onClick={etsiLyhyet} >Paina tästä löytääksesi lyhyitä action-leffoja suomenkielisillä julkaisunimillä!</button>
           <br />
           <ol>
-            {!isLoaded1 ? (
-              <div class="spinner-border text-info" role="status">
-                <span class="visually-hidden">Loading...</span>
+            {isLoaded1 === false ? (
+              <div className="spinner-border text-info" role="status">
+                <span className="visually-hidden">Loading...</span>
               </div>
             ) : (
               (lyhyet?.map(lyhyt => (
